@@ -1,0 +1,34 @@
+.hero {
+  background-color: var(--color-primary);
+  color: var(--color-primary-light);
+  text-align: center;
+  padding-inline: var(--padding-inline);
+  padding-block: 80px 451px;
+  position: relative;
+  overflow-y: hidden;
+  isolation: isolate;
+}
+
+.hero__content > p {
+  margin-block-start: 0.875rem;
+}
+
+.hero__content > a {
+  margin-block-start: 1.5rem;
+}
+
+.hero__pattern {
+  position: absolute;
+  top: 102px;
+  right: 0;
+}
+
+.hero__image {
+  position: absolute;
+  left: 0;
+  transform: translateY(-90px);
+}
+
+.hero__image > img {
+  object-fit: cover;
+}
