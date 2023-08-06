@@ -11,6 +11,7 @@
   --text-size: 1rem;
   --fw-regular: 400;
   --fw-bold: 500;
+  --padding-inline: 24px;
 }
 
 body {
@@ -46,6 +47,11 @@ body {
 .max-width-container {
   max-inline-size: 20.4375rem;
   margin-inline: auto;
+}
+
+.text-small {
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
 }
 
 .visually-hidden:not(:focus):not(:active) {
