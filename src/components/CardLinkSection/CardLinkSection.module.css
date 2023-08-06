@@ -1,0 +1,8 @@
+.section {
+  padding-inline: var(--padding-inline);
+  padding-block-start: 120px;
+}
+
+.section > * + * {
+  margin-block-start: 24px;
+}
