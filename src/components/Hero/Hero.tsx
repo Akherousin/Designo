@@ -33,6 +33,8 @@ function BgPattern({ className }: { className: string }) {
       height="639"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      focusable="false"
+      aria-hidden="true"
     >
       <defs>
         <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a">
