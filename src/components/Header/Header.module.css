@@ -1,13 +1,12 @@
 .header {
-  --_padding-inline: 24px;
-  padding-inline: var(--_padding-inline);
+  padding-inline: var(--padding-inline);
   padding-block: 35px 34px;
   position: relative;
   background-color: var(--color-primary-light);
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  z-index: 2;
   isolation: isolate;
 }
 
@@ -19,7 +18,7 @@
 .nav__list {
   display: none;
   position: absolute;
-  padding-inline: var(--_padding-inline);
+  padding-inline: var(--padding-inline);
   padding-block: 48px;
   width: 100%;
   left: 0;
