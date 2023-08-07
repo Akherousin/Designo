@@ -1,0 +1,17 @@
+.cardFeature {
+  text-align: center;
+}
+
+.cardFeature__image > img {
+  margin-inline: auto;
+}
+
+.cardFeature__heading {
+  composes: heading-small from global;
+  text-transform: uppercase;
+  margin-block-start: 3rem;
+}
+
+.cardFeature__desc {
+  margin-block-start: 2rem;
+}
