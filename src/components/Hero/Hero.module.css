@@ -20,9 +20,16 @@
 
 .hero__pattern {
   position: absolute;
-  top: 102px;
+  width: 100%;
   right: 0;
+  top: 102px;
   z-index: -2;
+}
+
+.hero__pattern > img {
+  object-fit: none;
+  margin-inline-start: auto;
+  object-position: left;
 }
 
 .hero__image {

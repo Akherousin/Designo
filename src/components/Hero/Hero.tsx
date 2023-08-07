@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import bgPattern from '@/assets/home/desktop/bg-pattern-hero-home.svg';
 import phoneImgSrc from '@/assets/home/desktop/image-hero-phone.png';
 import StyledLink from '../StyledLink/StyledLink';
 import styles from './Hero.module.css';
@@ -18,7 +19,9 @@ function Hero() {
         </p>
         <StyledLink href="about">Learn More</StyledLink>
       </div>
-      <BgPattern className={styles.hero__pattern} />
+      <div className={styles.hero__pattern}>
+        <Image alt="" src={bgPattern} />
+      </div>
       <div className={styles.hero__image}>
         <Image src={phoneImgSrc} alt="" />
       </div>
@@ -26,32 +29,4 @@ function Hero() {
   );
 }
 
-function BgPattern({ className }: { className: string }) {
-  return (
-    <svg
-      width="640"
-      height="639"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      focusable="false"
-      aria-hidden="true"
-    >
-      <defs>
-        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a">
-          <stop stopColor="#5D0202" stopOpacity="0" offset="0%" />
-          <stop stopColor="#5D0202" stopOpacity=".498" offset="100%" />
-        </linearGradient>
-      </defs>
-      <circle
-        fill="url(#a)"
-        transform="matrix(0 -1 -1 0 640 640)"
-        cx="320"
-        cy="320"
-        r="320"
-        fillRule="evenodd"
-        opacity=".309"
-      />
-    </svg>
-  );
-}
 export default Hero;
