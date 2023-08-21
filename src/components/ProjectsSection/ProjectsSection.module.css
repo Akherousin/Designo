@@ -1,0 +1,7 @@
+.projects {
+  padding-inline: var(--padding-inline);
+}
+
+.projects > * + * {
+  margin-block-start: 40px;
+}
