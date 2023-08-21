@@ -1,0 +1,35 @@
+.intro {
+  padding-block: 105px;
+  padding-inline: var(--padding-inline);
+  background-color: var(--color-primary);
+  color: var(--color-primary-light);
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.intro__title {
+  composes: heading-large from global;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.intro__text {
+  max-width: 40ch;
+  margin-inline: auto;
+  margin-block-start: 1.5rem;
+  position: relative;
+}
+
+.intro__pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.intro__pattern > img {
+  object-fit: none;
+  margin-inline-start: auto;
+  object-position: right;
+}
