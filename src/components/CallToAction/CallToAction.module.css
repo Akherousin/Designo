@@ -1,7 +1,4 @@
 .cta {
-  --margin-block-start: 7.5625rem;
-  margin-block-start: var(--margin-block-start);
-
   text-align: center;
   color: var(--color-primary-light);
   padding-inline: var(--padding-inline);

@@ -1,6 +1,6 @@
 .section {
   padding-inline: var(--padding-inline);
-  margin-block-start: 7.5rem;
+  /* margin-block-start: 7.5rem; */
 }
 
 .section > * + * {
