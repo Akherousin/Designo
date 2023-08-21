@@ -1,0 +1,31 @@
+.project {
+  background-color: var(--color-tertiary);
+  min-height: 478px;
+  display: grid;
+  grid-template-rows: 320fr 158fr;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.project__image {
+  height: 100%;
+}
+
+.project__image > img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.project__title {
+  composes: heading-small from global;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.project__text {
+  max-width: 25ch;
+  margin-inline: auto;
+  margin-block-start: 1rem;
+}
