@@ -7,7 +7,6 @@ export default function LocationsPage() {
     <section>
       <CardLocationSection />
       <Separator size="big" />
-      <CallToAction />
     </section>
   );
 }

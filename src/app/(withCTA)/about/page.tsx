@@ -67,7 +67,6 @@ export default function AboutPage() {
         </p>
       </Section>
       <Separator size="big" />
-      <CallToAction />
     </>
   );
 }

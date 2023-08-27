@@ -13,7 +13,6 @@ export default function Home() {
       <Separator size="big" />
       <CardFeatureSection />
       <Separator size="big" />
-      <CallToAction />
     </>
   );
 }

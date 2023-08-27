@@ -5,19 +5,18 @@ import CardLinkSection from '@/components/CardLinkSection';
 import CallToAction from '@/components/CallToAction';
 import Separator from '@/components/Separator/Separator';
 
-export default function WebDesignPage() {
+export default function AppDesignPage() {
   return (
     <>
       <Intro
-        title="Web Design"
-        text="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
+        title="App Design"
+        text="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."
       />
       <Separator size="small" />
-      <ProjectSection projects={PROJECTS.webDesign} />
+      <ProjectSection projects={PROJECTS.appDesign} />
       <Separator size="small" />
-      <CardLinkSection excludeHref="web-design" />
+      <CardLinkSection excludeHref="app-design" />
       <Separator size="small" />
-      <CallToAction />
     </>
   );
 }
