@@ -105,3 +105,5 @@ export const PROJECTS: Projects = {
     },
   ],
 };
+
+export type Coords = [number, number];

@@ -63,3 +63,8 @@ body {
   white-space: nowrap;
   width: 1px;
 }
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}

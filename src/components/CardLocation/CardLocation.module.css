@@ -1,0 +1,53 @@
+.location {
+  text-align: center;
+}
+
+.location__map {
+  width: 100%;
+  height: 320px;
+}
+
+.location__info {
+  composes: text-small from global;
+  position: relative;
+  background-color: var(--color-tertiary);
+  padding-block: 80px;
+  padding-inline: var(--padding-inline);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.location__info strong {
+  text-transform: capitalize;
+}
+
+.location__info > * + * {
+  margin-block-start: 1.5rem;
+  position: relative;
+}
+
+.location__country {
+  composes: heading-large from global;
+  color: var(--color-primary);
+}
+
+.location__contacts * {
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+}
+
+.location__pattern {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.location__pattern > img {
+  object-fit: none;
+  object-position: left;
+  width: 100%;
+  pointer-events: none;
+}
