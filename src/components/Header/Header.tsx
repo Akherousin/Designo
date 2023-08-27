@@ -2,12 +2,18 @@
 import Logo from '@/components/Logo';
 import styles from './Header.module.css';
 import NavLink from '../NavLink/NavLink';
-import { useState, useRef } from 'react';
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import { useTrapFocus } from '@/hooks/useTrapFocus';
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const pathname = usePathname();
   const navRef = useTrapFocus();
+
+  useEffect(() => {
+    setIsNavOpen(false);
+  }, [pathname]);
 
   return (
     <header className={styles.header}>
@@ -36,13 +42,13 @@ function Header() {
           className={`${styles.nav__list} ${isNavOpen ? styles.open : ''}`}
         >
           <li>
-            <NavLink href="about">Our company</NavLink>
+            <NavLink href="/about">Our company</NavLink>
           </li>
           <li>
-            <NavLink href="locations">Locations</NavLink>
+            <NavLink href="/locations">Locations</NavLink>
           </li>
           <li>
-            <NavLink href="contact">Contact</NavLink>
+            <NavLink href="/contact">Contact</NavLink>
           </li>
         </ul>
       </nav>
