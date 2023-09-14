@@ -4,7 +4,6 @@ import worldClassImg from '@/assets/about/mobile/image-world-class-talent.jpg';
 import realDealImg from '@/assets/about/mobile/image-real-deal.jpg';
 import CardCountriesSection from '@/components/CardCountriesSection';
 import Separator from '@/components/Separator/Separator';
-import CallToAction from '@/components/CallToAction/CallToAction';
 
 export default function AboutPage() {
   return (

@@ -1,0 +1,77 @@
+.form {
+  ---input-padding-block: 11px;
+}
+
+.form__field {
+  height: fit-content;
+  position: relative;
+}
+
+.form__field:not(:first-child) {
+  margin-block-start: 0.875rem;
+}
+
+.input {
+  composes: text-small from global;
+  background-color: transparent;
+  border: none;
+  border-block-end: 1px solid var(--color-primary-light);
+  color: inherit;
+  width: 100%;
+  padding-block: var(---input-padding-block);
+  padding-inline: 13.77px;
+}
+
+.input::placeholder {
+  color: inherit;
+  opacity: 0.5;
+  text-transform: capitalize;
+}
+
+.textarea {
+  display: block;
+  resize: none;
+  min-height: 101px;
+}
+
+.error {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: var(---input-padding-block);
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.625rem;
+  color: inherit;
+  text-transform: capitalize;
+}
+
+.input[aria-invalid='true'] + .error {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.button {
+  composes: text-small from global;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 18px 47px 16px 48px;
+  margin-block-start: 2.5rem;
+  margin-inline: auto;
+  border-radius: 8px;
+  border: transparent;
+  font-weight: 500;
+  letter-spacing: 0.0625rem;
+  background-color: var(--color-primary-light);
+  color: var(--color-secondary-dark);
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--color-secondary);
+  color: var(--color-primary-light);
+}

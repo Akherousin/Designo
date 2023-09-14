@@ -1,0 +1,31 @@
+.section {
+  position: relative;
+  background-color: var(--color-primary);
+  padding-inline: var(--padding-inline);
+  padding-block: 72px;
+  color: var(--color-primary-light);
+  text-align: center;
+}
+
+.section__title {
+  composes: heading-large from global;
+  margin-block-end: 1.5rem;
+}
+
+.section__info {
+  composes: text-small from global;
+  position: relative;
+  margin-block-end: 3rem;
+  line-height: 1.5625rem;
+}
+
+.section__pattern {
+  position: absolute;
+  inset: 0;
+}
+
+.section__pattern > img {
+  object-fit: none;
+  object-position: 25%;
+  max-height: 100%;
+}
