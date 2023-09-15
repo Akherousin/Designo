@@ -1,7 +1,7 @@
 import Image from 'next/image';
+import Map from '@/components/Map';
 import styles from './CardLocation.module.css';
 import patternSrc from '@/assets/shared/desktop/bg-pattern-three-circles.svg';
-import Map from '../Map';
 import { PropsWithChildren } from 'react';
 import { Coords } from '@/data';
 
