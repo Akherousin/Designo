@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import bgPattern from '@/assets/home/desktop/bg-pattern-hero-home.svg';
-import phoneImgSrc from '@/assets/home/desktop/image-hero-phone.png';
+import phoneImgSrc from '@/assets/home/mobile/image-hero-phone.png';
 import StyledLink from '../StyledLink/StyledLink';
 import styles from './Hero.module.css';
 
@@ -20,10 +20,10 @@ function Hero() {
         <StyledLink href="about">Learn More</StyledLink>
       </div>
       <div className={styles.hero__pattern}>
-        <Image alt="" src={bgPattern} />
+        <Image alt="" src={bgPattern} fill={true} />
       </div>
       <div className={styles.hero__image}>
-        <Image src={phoneImgSrc} alt="" />
+        <Image src={phoneImgSrc} alt="" priority />
       </div>
     </section>
   );

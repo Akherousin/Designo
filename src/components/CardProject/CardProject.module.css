@@ -1,8 +1,10 @@
 .project {
   background-color: var(--color-tertiary);
+  max-width: 20.4375rem;
   min-height: 478px;
+  margin-inline: auto;
   display: grid;
-  grid-template-rows: 320fr 158fr;
+  grid-template-rows: 20rem auto;
   align-items: center;
   text-align: center;
   overflow: hidden;

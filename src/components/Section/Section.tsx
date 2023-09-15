@@ -22,7 +22,7 @@ function Section({
   return (
     <section className={styles.section}>
       <div className={styles.section__image}>
-        <Image src={image} alt="" />
+        <Image src={image} alt="" fill={true} />
       </div>
       <div
         className={`${styles.section__info} ${
@@ -38,7 +38,11 @@ function Section({
               : styles['section__pattern--light']
           }`}
         >
-          <Image src={variant === 'dark' ? darkPattern : lightPattern} alt="" />
+          <Image
+            src={variant === 'dark' ? darkPattern : lightPattern}
+            alt=""
+            fill={true}
+          />
         </div>
         <Heading className={styles.section__title}>{title}</Heading>
 

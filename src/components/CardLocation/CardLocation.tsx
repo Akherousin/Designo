@@ -26,7 +26,7 @@ function CardLocation({
       </div>
       <div className={styles.location__info}>
         <div className={styles.location__pattern}>
-          <Image src={patternSrc} alt="" />
+          <Image src={patternSrc} alt="" fill={true} />
         </div>
 
         <h2 className={styles.location__country}>{country}</h2>

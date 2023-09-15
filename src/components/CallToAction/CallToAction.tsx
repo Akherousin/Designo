@@ -8,7 +8,7 @@ function CallToAction() {
     <section className={styles.cta}>
       <div className={styles.cta__box}>
         <div className={styles.cta__pattern}>
-          <Image src={bgPattern} alt="" />
+          <Image src={bgPattern} alt="" fill={true} />
         </div>
         <h2 className={styles.cta__header}>
           Let&apos;s talk about your project

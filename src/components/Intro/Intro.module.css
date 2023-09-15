@@ -30,6 +30,5 @@
 
 .intro__pattern > img {
   object-fit: none;
-  margin-inline-start: auto;
   object-position: right;
 }

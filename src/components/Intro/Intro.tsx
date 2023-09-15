@@ -12,7 +12,7 @@ function Intro({ title, text }: IntroProps) {
   return (
     <section className={styles.intro}>
       <div className={styles.intro__pattern}>
-        <Image src={bgPattern} alt="" />
+        <Image src={bgPattern} alt="" fill={true} />
       </div>
       <h1 className={styles.intro__title}>{title}</h1>
       <p className={styles.intro__text}>{text}</p>
