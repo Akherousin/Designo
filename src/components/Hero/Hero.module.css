@@ -34,7 +34,10 @@
 
 .hero__image {
   position: absolute;
+  width: 100%;
   left: 0;
+  display: flex;
+  justify-content: center;
   transform: translateY(-90px);
   z-index: -1;
 }
