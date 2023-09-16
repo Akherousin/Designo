@@ -41,6 +41,7 @@
   height: auto;
   margin-inline: auto;
   transform: translateX(17px);
+  z-index: -1;
 }
 
 .hero__image > img {
