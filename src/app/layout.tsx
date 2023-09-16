@@ -5,7 +5,11 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 import { Jost } from 'next/font/google';
 
-const jost = Jost({ subsets: ['latin'], preload: true });
+const jost = Jost({
+  subsets: ['latin'],
+  variable: '--font-general',
+  preload: true,
+});
 
 export const metadata: Metadata = {
   title: 'Designo',
