@@ -10,7 +10,10 @@ function CardCountry({ country, image }: Country) {
         <Image src={image} alt="" />
       </div>
       <h2 className={styles.country__title}>{country}</h2>
-      <StyledLink href="locations" variant="dark">
+      <StyledLink
+        href={`/locations#${country.split(' ').join('').toLowerCase()}`}
+        variant="dark"
+      >
         See Location <span className="visually-hidden">{country}</span>
       </StyledLink>
     </article>

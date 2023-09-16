@@ -20,7 +20,10 @@ function CardLocation({
   children,
 }: PropsWithChildren<CardLocationProps>) {
   return (
-    <article className={styles.location}>
+    <article
+      className={styles.location}
+      id={country.split(' ').join('').toLowerCase()}
+    >
       <div className={styles.location__map}>
         <Map coords={coords} popup={`Office in ${country}.`} />
       </div>
