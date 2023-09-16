@@ -18,7 +18,7 @@ function CardLink({ title, href, image }: CardLinkProps) {
       </p>
 
       <div className={styles.cardLink__image}>
-        <Image src={image} alt="" />
+        <Image src={image} alt="" fill={true} />
       </div>
     </Link>
   );

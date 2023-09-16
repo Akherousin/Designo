@@ -7,7 +7,7 @@ function FormSection() {
   return (
     <section className={styles.section}>
       <div className={styles.section__pattern}>
-        <Image src={bgPattern} alt="" />
+        <Image src={bgPattern} alt="" fill={true} />
       </div>
       <div className={styles.section__info}>
         <h1 className={styles.section__title}>Contact us</h1>
