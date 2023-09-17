@@ -1,5 +1,6 @@
 .section {
   text-align: center;
+  line-height: 1.5625rem;
 }
 
 .section__image {
@@ -58,8 +59,40 @@
 .section--light {
   background-color: var(--color-tertiary);
   color: var(--color-secondary-dark);
+  min-height: 545px;
 }
 
 .section--light :is(h1, h2) {
   color: var(--color-primary);
+}
+
+@media screen and (min-width: 600px) {
+  .section {
+    margin-block-start: 6px;
+    margin-inline: var(--padding-inline);
+    border-radius: var(--border-radius);
+    /* Overflow is for rounded borders */
+    overflow: hidden;
+  }
+
+  .section__info {
+    padding-block: 64px 69px;
+  }
+
+  .section__info > p {
+    margin-block-start: 2rem;
+  }
+
+  .section--light {
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary-dark);
+    min-height: revert;
+  }
+  .section__pattern--light > img {
+    object-position: bottom 50px right 10px;
+  }
+
+  .section--light > .section__title {
+    font-size: var(--h-size-m);
+  }
 }

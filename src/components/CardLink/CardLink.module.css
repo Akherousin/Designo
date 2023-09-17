@@ -4,7 +4,7 @@
   position: relative;
   padding-block: 90.16px 85.87px;
   color: var(--color-primary-light);
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   isolation: isolate;
   text-decoration: none;

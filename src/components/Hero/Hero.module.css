@@ -63,7 +63,7 @@
     padding-inline: 58px;
     margin-inline: var(--padding-inline);
     padding-block: 60px 457px;
-    border-radius: 15px;
+    border-radius: var(--border-radius);
   }
 
   .hero__text {

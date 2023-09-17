@@ -1,0 +1,9 @@
+.grid > * {
+  margin-block-end: 6rem;
+}
+
+@media screen and (min-width: 600px) {
+  .grid > * {
+    margin-block-end: 7.5rem;
+  }
+}

@@ -1,9 +1,9 @@
-import { PROJECT } from '@/data';
+import { Project } from '@/data';
 import CardProject from '../CardProject/CardProject';
 import styles from './ProjectsSection.module.css';
 
 interface ProjectSectionProps {
-  projects: PROJECT[];
+  projects: Project[];
 }
 
 function ProjectSection({ projects }: ProjectSectionProps) {

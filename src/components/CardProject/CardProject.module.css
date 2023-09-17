@@ -5,19 +5,28 @@
   margin-inline: auto;
   display: grid;
   grid-template-rows: 20rem auto;
+  grid-template-areas: 'image' 'info';
   align-items: center;
   text-align: center;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
+  position: relative;
 }
 
 .project__image {
   height: 100%;
+  position: absolute;
+  grid-area: image;
 }
 
 .project__image > img {
   object-fit: cover;
   height: 100%;
+}
+
+.project__info {
+  grid-area: info;
+  padding-block: 32px;
 }
 
 .project__title {
@@ -27,7 +36,21 @@
 }
 
 .project__text {
-  max-width: 25ch;
+  max-width: 27ch;
   margin-inline: auto;
   margin-block-start: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .project {
+    grid-template-columns: 339fr 350fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'image info';
+    max-width: revert;
+    min-height: auto;
+  }
+
+  .project__info {
+    padding-block: 108px;
+  }
 }

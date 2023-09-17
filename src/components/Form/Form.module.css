@@ -1,5 +1,5 @@
 .form {
-  ---input-padding-block: 11px;
+  ---input-padding-block: 10px;
 }
 
 .form__field {
@@ -8,7 +8,7 @@
 }
 
 .form__field:not(:first-child) {
-  margin-block-start: 0.875rem;
+  margin-block-start: 1rem;
 }
 
 .input {
@@ -31,7 +31,7 @@
 .textarea {
   display: block;
   resize: none;
-  min-height: 101px;
+  min-height: 110px;
 }
 
 .error {
@@ -59,7 +59,7 @@
   display: block;
   cursor: pointer;
   text-transform: uppercase;
-  padding: 18px 47px 16px 48px;
+  padding: 16px 46px 16px 46px;
   margin-block-start: 2.5rem;
   margin-inline: auto;
   border-radius: 8px;
@@ -74,4 +74,20 @@
 .button:focus-visible {
   background-color: var(--color-secondary);
   color: var(--color-primary-light);
+}
+
+@media screen and (min-width: 600px) {
+  .input {
+    padding-inline: 24.13px;
+  }
+
+  .textarea {
+    min-height: 112px;
+  }
+
+  .button {
+    margin: 0;
+    margin-block-start: 1.5rem;
+    margin-inline-start: auto;
+  }
 }

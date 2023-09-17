@@ -1,5 +1,5 @@
 .intro {
-  padding-block: 105px;
+  padding-block: 105px 104px;
   padding-inline: var(--padding-inline);
   background-color: var(--color-primary);
   color: var(--color-primary-light);
@@ -16,6 +16,7 @@
 }
 
 .intro__text {
+  composes: text-small from global;
   max-width: 40ch;
   margin-inline: auto;
   margin-block-start: 1.5rem;
@@ -30,5 +31,18 @@
 
 .intro__pattern > img {
   object-fit: none;
-  object-position: right;
+  object-position: top right;
+}
+
+@media screen and (min-width: 700px) {
+  .intro {
+    margin-inline: var(--padding-inline);
+    padding-block: 64px;
+    border-radius: var(--border-radius);
+  }
+
+  .intro__pattern > img {
+    object-fit: none;
+    object-position: top 50% right -165px;
+  }
 }

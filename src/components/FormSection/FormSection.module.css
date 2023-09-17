@@ -10,12 +10,13 @@
 .section__title {
   composes: heading-large from global;
   margin-block-end: 1.5rem;
+  text-transform: capitalize;
 }
 
 .section__info {
   composes: text-small from global;
   position: relative;
-  margin-block-end: 3rem;
+  margin-block-end: 2.5rem;
   line-height: 1.5625rem;
 }
 
@@ -23,12 +24,34 @@
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
 }
 
 .section__pattern > img {
   object-fit: none;
-  object-position: left;
+  object-position: top 0 left -90px;
+}
+
+@media screen and (min-width: 600px) {
+  .section {
+    margin-inline: var(--padding-inline);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    text-align: start;
+
+    padding-inline: 58px;
+  }
+
+  .section__title {
+    margin-block-end: 2rem;
+  }
+
+  .section__info {
+    margin-block-end: 2rem;
+  }
+
+  .section__pattern > img {
+    object-position: top -80px left -123px;
+  }
 }

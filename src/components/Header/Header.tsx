@@ -19,10 +19,35 @@ function Header() {
     <header className={styles.header}>
       <Logo />
 
-      <nav aria-labelledby="nav__label" ref={navRef}>
-        <span id="nav__label" hidden>
-          Site
-        </span>
+      <span id="nav__label" hidden>
+        Site
+      </span>
+
+      <nav aria-labelledby="nav__label" className={styles['nav--tablet-up']}>
+        <ul className={styles['nav__list--tablet-up']}>
+          <li>
+            <NavLink href="/about" className={styles.nav__link}>
+              Our company
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/locations" className={styles.nav__link}>
+              Locations
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="/contact" className={styles.nav__link}>
+              Contact
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+
+      <nav
+        aria-labelledby="nav__label"
+        ref={navRef}
+        className={styles['nav--mobile']}
+      >
         <button
           className={styles.nav__btn}
           aria-expanded={isNavOpen}

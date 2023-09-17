@@ -13,6 +13,7 @@
   --fw-regular: 400;
   --fw-bold: 500;
   --padding-inline: 24px;
+  --border-radius: 15px;
 }
 
 body {
@@ -26,15 +27,16 @@ body {
 }
 
 body::after {
-  /* content: ''; */
+  content: '';
   position: absolute;
   inset: 0;
   height: 100%;
-
-  background-image: url('/Tablet.png');
+  z-index: 9999;
+  /* background-image: url('/Mobile.png'); */
+  /* background-image: url('/Tablet.png'); */
   background-repeat: no-repeat;
   background-position: top;
-  opacity: 0.6;
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -88,6 +90,10 @@ body::after {
   display: none;
 }
 
+.tablet-up {
+  display: none;
+}
+
 @media screen and (min-width: 600px) {
   :root {
     --h-size-l: 3rem;
@@ -114,6 +120,10 @@ body::after {
   }
 
   .tablet-only {
-    display: block;
+    display: initial;
+  }
+
+  .tablet-up {
+    display: initial;
   }
 }

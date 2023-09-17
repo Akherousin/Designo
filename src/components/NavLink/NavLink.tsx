@@ -7,17 +7,16 @@ type NavLinkProps = LinkProps & ComponentPropsWithoutRef<'a'>;
 
 export function NavLink({ href, children, ...delegated }: NavLinkProps) {
   const pathname = usePathname();
-  const isCurrent = pathname !== href;
-
-  if (isCurrent)
-    return (
-      <Link href={href} {...delegated} aria-current="page">
-        {children}
-      </Link>
-    );
+  const isCurrent = pathname === href;
 
   return (
-    <Link href={href} {...delegated}>
+    <Link
+      href={href}
+      {...delegated}
+      {...(isCurrent && {
+        'aria-current': 'page',
+      })}
+    >
       {children}
     </Link>
   );

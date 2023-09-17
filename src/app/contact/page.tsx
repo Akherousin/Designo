@@ -1,14 +1,14 @@
 import CardCountriesSection from '@/components/CardCountriesSection';
 import FormSection from '@/components/FormSection';
-import Separator from '@/components/Separator';
+import styles from './page.module.css';
 
 export default function ContactPage() {
   return (
     <>
-      <FormSection />
-      <Separator size="small" />
-      <CardCountriesSection />
-      <Separator size="small" />
+      <div className={styles.grid}>
+        <FormSection />
+        <CardCountriesSection />
+      </div>
     </>
   );
 }

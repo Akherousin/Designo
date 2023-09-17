@@ -15,7 +15,7 @@
   background-color: var(--color-primary);
   padding-block: 64px;
   padding-inline: 24px;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   position: relative;
   isolation: isolate;

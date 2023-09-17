@@ -5,3 +5,9 @@
 .projects > * + * {
   margin-block-start: 40px;
 }
+
+@media screen and (min-width: 700px) {
+  .projects > * + * {
+    margin-block-start: 32px;
+  }
+}

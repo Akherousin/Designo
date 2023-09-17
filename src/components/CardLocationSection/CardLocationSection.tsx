@@ -1,6 +1,7 @@
-import { Coords } from '@/data';
 import CardLocation from '../CardLocation/CardLocation';
 import styles from './CardLocationSection.module.css';
+
+type Coords = [number, number];
 
 interface Location {
   country: string;
