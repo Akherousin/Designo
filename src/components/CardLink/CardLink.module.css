@@ -2,7 +2,7 @@
   display: block;
   text-align: center;
   position: relative;
-  padding-block: 90.16px 89.87px;
+  padding-block: 90.16px 85.87px;
   color: var(--color-primary-light);
   border-radius: 15px;
   overflow: hidden;
@@ -28,6 +28,7 @@
 
 .cardLink__heading {
   composes: heading-medium from global;
+  letter-spacing: 0.0875rem;
 }
 
 .cardLink__text {
@@ -37,7 +38,7 @@
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  margin-block-start: 0, 748125rem;
+  margin-block-start: 0.748125rem;
 }
 
 .cardLink__image {
@@ -50,4 +51,14 @@
 
 .cardLink__image > img {
   object-fit: cover;
+}
+
+@media screen and (min-width: 600px) {
+  .cardLink {
+    padding-block: 53px;
+  }
+
+  .cardLink__text {
+    margin-block-start: 1.25rem;
+  }
 }

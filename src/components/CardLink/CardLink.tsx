@@ -5,10 +5,11 @@ import styles from './CardLink.module.css';
 interface CardLinkProps {
   title: string;
   href: string;
-  image: string | StaticImageData;
+  imageMobile: string | StaticImageData;
+  imageTablet: string | StaticImageData;
 }
 
-function CardLink({ title, href, image }: CardLinkProps) {
+function CardLink({ title, href, imageMobile, imageTablet }: CardLinkProps) {
   return (
     <Link className={styles.cardLink} href={href}>
       <h2 className={styles.cardLink__heading}>{title}</h2>
@@ -18,7 +19,8 @@ function CardLink({ title, href, image }: CardLinkProps) {
       </p>
 
       <div className={styles.cardLink__image}>
-        <Image src={image} alt="" fill={true} />
+        <Image src={imageMobile} alt="" fill={true} className="mobile-only" />
+        <Image src={imageTablet} alt="" fill={true} className="tablet-only" />
       </div>
     </Link>
   );

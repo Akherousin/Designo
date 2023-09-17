@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Separator size="small" />
+      <Separator size="big" />
       <CardLinkSection />
       <Separator size="big" />
       <CardFeatureSection />
-      <Separator size="big" />
+      <Separator size="big" toSmall />
     </>
   );
 }

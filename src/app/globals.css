@@ -17,11 +17,25 @@
 
 body {
   font-size: var(--text-size);
-  line-height: 1.625;
+  line-height: 1.625rem;
   font-weight: var(--fw-regular);
   color: var(--color-secondary-dark);
   background-color: var(--color-primary-light);
   font-family: var(--font-general);
+  position: relative;
+}
+
+body::after {
+  /* content: ''; */
+  position: absolute;
+  inset: 0;
+  height: 100%;
+
+  background-image: url('/Tablet.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 /* Utilities */
@@ -68,4 +82,38 @@ body {
 .leaflet-container {
   width: 100%;
   height: 100%;
+}
+
+.tablet-only {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  :root {
+    --h-size-l: 3rem;
+    --h-size-m: 2.5rem;
+    --h-size-s: 1.25rem;
+    /* --text-size: 1rem; */
+    --padding-inline: 39px 40px;
+  }
+
+  .heading-large {
+    line-height: 3rem;
+  }
+
+  .heading-medium {
+    line-height: 3rem;
+  }
+
+  .text-small {
+    font-size: 1rem;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .tablet-only {
+    display: block;
+  }
 }

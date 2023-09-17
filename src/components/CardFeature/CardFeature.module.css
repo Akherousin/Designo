@@ -1,5 +1,7 @@
 .cardFeature {
   text-align: center;
+  max-width: 20.4375rem;
+  margin-inline: auto;
 }
 
 .cardFeature__image > img {
@@ -14,4 +16,30 @@
 
 .cardFeature__desc {
   margin-block-start: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .cardFeature {
+    max-width: revert;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    text-align: start;
+    column-gap: 48px;
+  }
+
+  .cardFeature__image {
+    grid-row: 1 / span 2;
+  }
+
+  .cardFeature__heading {
+    margin: 0;
+    margin-block-end: 1rem;
+    align-self: end;
+    grid-row: 1/2;
+  }
+
+  .cardFeature__desc {
+    margin-block-start: 0;
+    grid-row: 2/3;
+  }
 }

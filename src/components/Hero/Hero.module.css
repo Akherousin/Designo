@@ -5,12 +5,23 @@
   padding-inline: var(--padding-inline);
   padding-block: 80px 451px;
   position: relative;
-  overflow-y: hidden;
   isolation: isolate;
+
+  /* makes sure that phone image doesn't cause scroll bugglers on lower resolutions*/
+  overflow: hidden;
 }
 
-.hero__content > p {
-  margin-block-start: 0.875rem;
+.hero__heading {
+  composes: heading-large from global;
+  max-width: 35.8125rem;
+  margin-inline: auto;
+}
+
+.hero__text {
+  composes: text-small from global;
+  max-width: 47ch;
+  margin-inline: auto;
+  margin-block-start: 24px;
   line-height: 1.5625rem;
 }
 
@@ -22,8 +33,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  right: 0;
-  top: 102px;
+  inset: 0;
   z-index: -2;
 }
 
@@ -34,18 +44,48 @@
 
 .hero__image {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: fit-content;
-  height: auto;
+  width: 375px;
+  height: 100%;
+  inset: 0;
   margin-inline: auto;
-  transform: translateX(17px);
   z-index: -1;
+  pointer-events: none;
 }
 
 .hero__image > img {
-  object-fit: cover;
-  object-position: 50%;
-  aspect-ratio: 442/508;
+  object-fit: contain;
+  scale: 1.66;
+  object-position: bottom -56px right 1px;
+}
+
+@media screen and (min-width: 600px) {
+  .hero {
+    padding-inline: 58px;
+    margin-inline: var(--padding-inline);
+    padding-block: 60px 457px;
+    border-radius: 15px;
+  }
+
+  .hero__text {
+    margin-block-start: 1.8rem;
+    transform: translateX(-5px);
+    line-height: 1.625rem;
+  }
+
+  .hero__content > a {
+    margin-block-start: 20px;
+  }
+
+  .hero__pattern {
+    top: 0;
+    left: 0;
+  }
+
+  .hero__pattern > img {
+    object-position: top 49% right -120px;
+  }
+
+  .hero__image > img {
+    object-position: bottom -45px right 1px;
+  }
 }
