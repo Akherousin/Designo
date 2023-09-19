@@ -4,6 +4,11 @@ import graphicDesignImgMobile from '@/assets/home/mobile/image-graphic-design.jp
 import webDesignImgTablet from '@/assets/home/tablet/image-web-design.jpg';
 import appDesignImgTablet from '@/assets/home/tablet/image-app-design.jpg';
 import graphicDesignImgTablet from '@/assets/home/tablet/image-graphic-design.jpg';
+import webDesignImgDesktopLarge from '@/assets/home/desktop/image-web-design-large.jpg';
+import webDesignImgDesktopSmall from '@/assets/home/desktop/image-web-design-small.jpg';
+import appDesignImgDesktop from '@/assets/home/desktop/image-app-design.jpg';
+import graphicDesignImgDesktop from '@/assets/home/desktop/image-graphic-design.jpg';
+
 import CardLink from '../CardLink';
 import styles from './CardLinkSection.module.css';
 import { StaticImageData } from 'next/image';
@@ -13,6 +18,7 @@ interface Link {
   href: 'web-design' | 'app-design' | 'graphic-design';
   imageMobile: string | StaticImageData;
   imageTablet: string | StaticImageData;
+  imageDesktop: string | StaticImageData;
 }
 
 interface CardLinkSectionProps {
@@ -25,6 +31,7 @@ const LINKS: Link[] = [
     href: 'web-design',
     imageMobile: webDesignImgMobile,
     imageTablet: webDesignImgTablet,
+    imageDesktop: webDesignImgDesktopLarge,
   },
 
   {
@@ -32,6 +39,7 @@ const LINKS: Link[] = [
     href: 'app-design',
     imageMobile: appDesignImgMobile,
     imageTablet: appDesignImgTablet,
+    imageDesktop: appDesignImgDesktop,
   },
 
   {
@@ -39,22 +47,33 @@ const LINKS: Link[] = [
     href: 'graphic-design',
     imageMobile: graphicDesignImgMobile,
     imageTablet: graphicDesignImgTablet,
+    imageDesktop: graphicDesignImgDesktop,
   },
 ];
 
 function CardLinkSection({ excludeHref }: CardLinkSectionProps) {
   return (
-    <section className={styles.section}>
+    <section
+      className={`${styles.section} ${
+        excludeHref ? '' : styles.complex
+      }`.trim()}
+    >
       {LINKS.filter((link) => link.href !== excludeHref).map(
-        ({ title, href, imageMobile, imageTablet }) => (
-          <CardLink
-            key={title}
-            href={href}
-            title={title}
-            imageMobile={imageMobile}
-            imageTablet={imageTablet}
-          />
-        )
+        ({ title, href, imageMobile, imageTablet, imageDesktop }) => {
+          if (excludeHref === 'web-design')
+            imageDesktop = webDesignImgDesktopSmall;
+
+          return (
+            <CardLink
+              key={title}
+              href={href}
+              title={title}
+              imageMobile={imageMobile}
+              imageTablet={imageTablet}
+              imageDesktop={imageDesktop}
+            />
+          );
+        }
       )}
     </section>
   );

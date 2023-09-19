@@ -7,9 +7,16 @@ interface CardLinkProps {
   href: string;
   imageMobile: string | StaticImageData;
   imageTablet: string | StaticImageData;
+  imageDesktop: string | StaticImageData;
 }
 
-function CardLink({ title, href, imageMobile, imageTablet }: CardLinkProps) {
+function CardLink({
+  title,
+  href,
+  imageMobile,
+  imageTablet,
+  imageDesktop,
+}: CardLinkProps) {
   return (
     <Link className={styles.cardLink} href={href}>
       <h2 className={styles.cardLink__heading}>{title}</h2>
@@ -21,6 +28,7 @@ function CardLink({ title, href, imageMobile, imageTablet }: CardLinkProps) {
       <div className={styles.cardLink__image}>
         <Image src={imageMobile} alt="" fill={true} className="mobile-only" />
         <Image src={imageTablet} alt="" fill={true} className="tablet-only" />
+        <Image src={imageDesktop} alt="" fill={true} className="desktop-up" />
       </div>
     </Link>
   );

@@ -1,9 +1,11 @@
 .intro {
+  text-align: center;
+}
+
+.intro__box {
   padding-block: 105px 104px;
-  padding-inline: var(--padding-inline);
   background-color: var(--color-primary);
   color: var(--color-primary-light);
-  text-align: center;
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -34,9 +36,12 @@
   object-position: top right;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   .intro {
-    margin-inline: var(--padding-inline);
+    padding-inline: var(--padding-inline);
+  }
+
+  .intro__box {
     padding-block: 64px;
     border-radius: var(--border-radius);
   }
@@ -44,5 +49,15 @@
   .intro__pattern > img {
     object-fit: none;
     object-position: top 50% right -165px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .intro {
+    max-width: var(--max-width);
+  }
+
+  .intro__pattern > img {
+    object-position: top 50% right 0;
   }
 }

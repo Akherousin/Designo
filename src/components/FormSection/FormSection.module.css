@@ -1,10 +1,12 @@
 .section {
+  text-align: center;
+}
+
+.section__box {
   position: relative;
   background-color: var(--color-primary);
-  padding-inline: var(--padding-inline);
   padding-block: 72px;
   color: var(--color-primary-light);
-  text-align: center;
 }
 
 .section__title {
@@ -35,11 +37,13 @@
 
 @media screen and (min-width: 600px) {
   .section {
-    margin-inline: var(--padding-inline);
+    padding-inline: var(--padding-inline);
+  }
+
+  .section__box {
     border-radius: var(--border-radius);
     overflow: hidden;
     text-align: start;
-
     padding-inline: 58px;
   }
 
@@ -51,7 +55,34 @@
     margin-block-end: 2rem;
   }
 
+  .section__text {
+    max-width: 47ch;
+  }
+
   .section__pattern > img {
     object-position: top -80px left -123px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section__box {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1.42fr 1fr;
+    grid-template-areas: 'info form';
+    padding-inline: var(--box-padding-inline) 96px;
+    padding-block: 0;
+    gap: 30px;
+  }
+
+  .section__info {
+    margin-block-end: 0;
+    padding-block: 135px 161px;
+    grid-area: info;
+    line-height: 1.625rem;
+  }
+
+  .section__pattern > img {
+    object-position: bottom left;
   }
 }

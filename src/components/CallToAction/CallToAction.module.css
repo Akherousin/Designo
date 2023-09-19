@@ -5,8 +5,8 @@
   background: linear-gradient(
     180deg,
     var(--color-primary-light) 0%,
-    var(--color-primary-light) 49.9999%,
-    var(--color-primary-dark) 50%,
+    var(--color-primary-light) 74.9999%,
+    var(--color-primary-dark) 75%,
     var(--color-primary-dark) 100%
   );
 }
@@ -64,5 +64,41 @@
 
   .cta__pattern > img {
     object-position: top 50% left -20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cta__box {
+    padding-block: 72px;
+    padding-inline: var(--box-padding-inline) 96px;
+    text-align: start;
+    display: grid;
+    grid-template-areas: 'header link' 'text link';
+  }
+
+  .cta__header,
+  .cta__text,
+  .cta__link {
+    margin: 0;
+  }
+
+  .cta__header {
+    grid-area: header;
+  }
+
+  .cta__text {
+    max-width: 50ch;
+    grid-area: text;
+    margin-block-start: 0.9rem;
+  }
+
+  .cta__link {
+    grid-area: link;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .cta__pattern > img {
+    object-position: top 50% right 0;
   }
 }

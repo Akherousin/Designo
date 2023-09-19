@@ -13,7 +13,9 @@
   --fw-regular: 400;
   --fw-bold: 500;
   --padding-inline: 24px;
+  --box-padding-inline: 95px;
   --border-radius: 15px;
+  --max-width: 70rem;
 }
 
 body {
@@ -27,12 +29,12 @@ body {
 }
 
 body::after {
-  content: '';
+  /* content: ''; */
   position: absolute;
   inset: 0;
   height: 100%;
   z-index: 9999;
-  /* background-image: url('/Mobile.png'); */
+  background-image: url('/Desktop.png');
   /* background-image: url('/Tablet.png'); */
   background-repeat: no-repeat;
   background-position: top;
@@ -62,13 +64,13 @@ body::after {
   letter-spacing: 0.3125rem;
 }
 
-.max-width-container {
-  max-inline-size: 20.4375rem;
-  margin-inline: auto;
-}
-
 .text-small {
   font-size: 0.9375rem;
+}
+
+.max-width-container {
+  max-width: var(--max-width);
+  margin-inline: auto;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -94,12 +96,19 @@ body::after {
   display: none;
 }
 
+.desktop-up {
+  display: none;
+}
+
+.stack > * {
+  margin-block-end: 7.5rem;
+}
+
 @media screen and (min-width: 600px) {
   :root {
     --h-size-l: 3rem;
     --h-size-m: 2.5rem;
     --h-size-s: 1.25rem;
-    /* --text-size: 1rem; */
     --padding-inline: 39px 40px;
   }
 
@@ -124,6 +133,24 @@ body::after {
   }
 
   .tablet-up {
+    display: initial;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --padding-inline: 0;
+  }
+
+  .stack > * {
+    margin-block-end: 10rem;
+  }
+
+  .desktop-down {
+    display: none;
+  }
+
+  .desktop-up {
     display: initial;
   }
 }

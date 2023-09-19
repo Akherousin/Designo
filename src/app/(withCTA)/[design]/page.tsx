@@ -14,7 +14,7 @@ export default async function DesignPage({
 
   return (
     <>
-      <div className={styles.grid}>
+      <div className={`${styles.grid} max-width-container`}>
         <Intro title={pageInfo.title} text={pageInfo.text} />
         <ProjectSection projects={pageInfo.projects} />
         <CardLinkSection excludeHref={params.design} />

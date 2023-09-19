@@ -5,3 +5,21 @@
 .section > * + * {
   margin-block-start: 1.5rem;
 }
+
+@media screen and (min-width: 1200px) {
+  .section {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 24px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section > * + * {
+    margin-block-start: 0;
+  }
+
+  .complex > *:first-child {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+}

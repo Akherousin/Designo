@@ -11,6 +11,7 @@ interface CardLocationProps {
   country: string;
   phone: string;
   mail: string;
+  isReversed?: boolean;
 }
 
 function CardLocation({
@@ -18,11 +19,14 @@ function CardLocation({
   country,
   phone,
   mail,
+  isReversed = false,
   children,
 }: PropsWithChildren<CardLocationProps>) {
   return (
     <article
-      className={styles.location}
+      className={`${styles.location} ${
+        isReversed ? styles.reversed : ''
+      }`.trim()}
       id={country.split(' ').join('').toLowerCase()}
     >
       <div className={styles.location__map}>

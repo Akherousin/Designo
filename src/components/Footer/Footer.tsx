@@ -5,67 +5,69 @@ import Link from 'next/link';
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <Logo variant="light" />
+      <div className={`${styles.footer__content} max-width-container`}>
+        <Logo variant="light" />
 
-      <ul className={styles.footer__list} role="list">
-        <li>
-          <Link href="/about">Our company</Link>
-        </li>
-        <li>
-          <Link href="/locations">Locations</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact</Link>
-        </li>
-      </ul>
+        <ul className={styles.footer__list} role="list">
+          <li>
+            <Link href="/about">Our company</Link>
+          </li>
+          <li>
+            <Link href="/locations">Locations</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
+        </ul>
 
-      <p className={styles.footer__postal}>
-        <strong>Designo central office</strong>
-        <br />
-        3886 Wellington Street <br />
-        Toronto, Ontario M9C 3J5
-      </p>
+        <p className={styles.footer__postal}>
+          <strong>Designo central office</strong>
+          <br />
+          3886 Wellington Street <br />
+          Toronto, Ontario M9C 3J5
+        </p>
 
-      <address className={styles.footer__contact}>
-        <strong>Contact Us (Central Office)</strong>
-        <br />
-        <a href="tel:+12538638967">P: +1 253-863-8967</a>
-        <br />
-        <a href="mailto:contact@designo.co">M: contact@designo.co</a>
-      </address>
+        <address className={styles.footer__contact}>
+          <strong>Contact Us (Central Office)</strong>
+          <br />
+          <a href="tel:+12538638967">P: +1 253-863-8967</a>
+          <br />
+          <a href="mailto:contact@designo.co">M: contact@designo.co</a>
+        </address>
 
-      <ul role="list" className={styles.footer__socials}>
-        <li>
-          <a href="https://www.facebook.com/">
-            <span className="visually-hidden">Facebook</span>
-            <FacebookSvg />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/">
-            <span className="visually-hidden">Youtube</span>
-            <YoutubeSvg />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com/">
-            <span className="visually-hidden">Twitter</span>
-            <TwitterSvg />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.pinterest.com/">
-            <span className="visually-hidden">Pinterest</span>
-            <PinterestSvg />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/">
-            <span className="visually-hidden">Instagram</span>
-            <InstagramSvg />
-          </a>
-        </li>
-      </ul>
+        <ul role="list" className={styles.footer__socials}>
+          <li>
+            <a href="https://www.facebook.com/">
+              <span className="visually-hidden">Facebook</span>
+              <FacebookSvg />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/">
+              <span className="visually-hidden">Youtube</span>
+              <YoutubeSvg />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/">
+              <span className="visually-hidden">Twitter</span>
+              <TwitterSvg />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.com/">
+              <span className="visually-hidden">Pinterest</span>
+              <PinterestSvg />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/">
+              <span className="visually-hidden">Instagram</span>
+              <InstagramSvg />
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
   );
 }

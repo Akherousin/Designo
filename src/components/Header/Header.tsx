@@ -16,7 +16,7 @@ function Header() {
   }, [pathname]);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} max-width-container`}>
       <Logo />
 
       <span id="nav__label" hidden>

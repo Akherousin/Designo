@@ -1,14 +1,16 @@
 .hero {
-  background-color: var(--color-primary);
-  color: var(--color-primary-light);
   text-align: center;
-  padding-inline: var(--padding-inline);
+}
+
+.hero__box {
   padding-block: 80px 451px;
   position: relative;
   isolation: isolate;
 
   /* makes sure that phone image doesn't cause scroll bugglers on lower resolutions*/
   overflow: hidden;
+  background-color: var(--color-primary);
+  color: var(--color-primary-light);
 }
 
 .hero__heading {
@@ -25,7 +27,7 @@
   line-height: 1.5625rem;
 }
 
-.hero__content > a {
+.hero__info > a {
   margin-block-start: 1.5rem;
 }
 
@@ -60,8 +62,12 @@
 
 @media screen and (min-width: 600px) {
   .hero {
+    padding-inline: var(--padding-inline);
+  }
+
+  .hero__box {
     padding-inline: 58px;
-    margin-inline: var(--padding-inline);
+
     padding-block: 60px 457px;
     border-radius: var(--border-radius);
   }
@@ -72,7 +78,7 @@
     line-height: 1.625rem;
   }
 
-  .hero__content > a {
+  .hero__info > a {
     margin-block-start: 20px;
   }
 
@@ -87,5 +93,41 @@
 
   .hero__image > img {
     object-position: bottom -45px right 1px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__box {
+    text-align: start;
+    padding-block: 145px;
+    padding-inline: 95px;
+  }
+
+  .hero__heading,
+  .hero__text {
+    margin: 0;
+  }
+
+  .hero__text {
+    margin-block-start: 2rem;
+    max-width: 44ch;
+    transform: translateX(0);
+  }
+
+  .hero__info > a {
+    margin-block-start: 2.5rem;
+  }
+
+  .hero__pattern > img {
+    object-position: right;
+  }
+
+  .hero__image {
+    margin-inline: 0;
+    margin-inline-start: auto;
+  }
+
+  .hero__image > img {
+    object-position: bottom -18px right 30px;
   }
 }

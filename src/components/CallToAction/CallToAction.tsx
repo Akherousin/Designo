@@ -6,7 +6,7 @@ import bgPattern from '@/assets/shared/desktop/bg-pattern-call-to-action.svg';
 function CallToAction() {
   return (
     <section className={styles.cta}>
-      <div className={styles.cta__box}>
+      <div className={`${styles.cta__box} max-width-container`}>
         <div className={styles.cta__pattern}>
           <Image src={bgPattern} alt="" fill={true} />
         </div>

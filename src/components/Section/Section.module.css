@@ -16,7 +16,7 @@
 .section__info {
   composes: text-small from global;
   padding-block: 80px;
-  padding-inline: var(--padding-inline);
+
   position: relative;
   overflow: hidden;
 }
@@ -68,9 +68,13 @@
 
 @media screen and (min-width: 600px) {
   .section {
+    padding-inline: var(--padding-inline);
+  }
+
+  .section__box {
     margin-block-start: 6px;
-    margin-inline: var(--padding-inline);
     border-radius: var(--border-radius);
+
     /* Overflow is for rounded borders */
     overflow: hidden;
   }
@@ -94,5 +98,51 @@
 
   .section--light > .section__title {
     font-size: var(--h-size-m);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section__box {
+    margin-block-start: 0;
+    display: grid;
+    grid-template-columns: 1fr 29.75rem;
+    grid-template-areas: 'info image';
+    text-align: start;
+    line-height: 1.625rem;
+  }
+
+  .reverse {
+    grid-template-columns: 29.75rem 1fr;
+    grid-template-areas: 'image info';
+  }
+
+  .section__info {
+    grid-area: info;
+    padding-inline: var(--box-padding-inline) 84px;
+  }
+
+  .section--dark {
+    padding-block: 135px;
+  }
+
+  .section--light {
+    padding-block: 154px;
+  }
+
+  .section--light > p {
+    margin-block-start: 1.5rem;
+  }
+
+  .section__image {
+    height: 100%;
+    grid-area: image;
+  }
+
+  .section__pattern--dark > img {
+    object-position: bottom left;
+  }
+
+  .section__pattern--light > img {
+    object-position: bottom left;
   }
 }

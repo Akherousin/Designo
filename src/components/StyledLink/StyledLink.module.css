@@ -4,11 +4,13 @@
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  display: inline-block;
+  display: inline-grid;
+  place-content: center;
   padding-block: 15px;
   padding-inline: 17px;
   border-radius: 8px;
   min-width: 9.5rem;
+  white-space: nowrap;
 }
 
 .light:link,

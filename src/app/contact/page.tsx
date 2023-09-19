@@ -5,7 +5,7 @@ import styles from './page.module.css';
 export default function ContactPage() {
   return (
     <>
-      <div className={styles.grid}>
+      <div className="stack max-width-container">
         <FormSection />
         <CardCountriesSection />
       </div>

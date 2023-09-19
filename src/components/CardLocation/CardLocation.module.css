@@ -12,7 +12,7 @@
   position: relative;
   background-color: var(--color-tertiary);
   padding-block: 80px;
-  padding-inline: var(--padding-inline);
+
   overflow: hidden;
   isolation: isolate;
   line-height: 1.5625rem;
@@ -59,7 +59,6 @@
 
 @media screen and (min-width: 600px) {
   .location {
-    padding-inline: var(--padding-inline);
     text-align: start;
   }
 
@@ -101,5 +100,31 @@
 
   .location__pattern > img {
     object-position: bottom left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .location {
+    --map-size: 21.875rem;
+    display: grid;
+    grid-template-columns: 1fr var(--map-size);
+    grid-template-areas: 'info map';
+    gap: 30px;
+  }
+
+  .reversed {
+    grid-template-columns: var(--map-size) 1fr;
+    grid-template-areas: 'map info';
+  }
+
+  .location__info {
+    grid-area: info;
+    padding-inline: var(--box-padding-inline);
+    padding-block: 88px;
+  }
+
+  .location__map {
+    grid-area: map;
+    height: 100%;
   }
 }

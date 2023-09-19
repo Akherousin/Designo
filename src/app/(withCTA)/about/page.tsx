@@ -1,20 +1,28 @@
 import Section from '@/components/Section';
-import aboutUsImg from '@/assets/about/mobile/image-about-hero.jpg';
-import worldClassImg from '@/assets/about/mobile/image-world-class-talent.jpg';
-import realDealImg from '@/assets/about/mobile/image-real-deal.jpg';
+import aboutUsImgMobile from '@/assets/about/mobile/image-about-hero.jpg';
+import worldClassImgMobile from '@/assets/about/mobile/image-world-class-talent.jpg';
+import realDealImgMobile from '@/assets/about/mobile/image-real-deal.jpg';
+import aboutUsImgTablet from '@/assets/about/tablet/image-about-hero.jpg';
+import worldClassImgTablet from '@/assets/about/tablet/image-world-class-talent.jpg';
+import realDealImgTablet from '@/assets/about/tablet/image-real-deal.jpg';
+import aboutUsImgDesktop from '@/assets/about/desktop/image-about-hero.jpg';
+import worldClassImgDesktop from '@/assets/about/desktop/image-world-class-talent.jpg';
+import realDealImgDesktop from '@/assets/about/desktop/image-real-deal.jpg';
+
 import CardCountriesSection from '@/components/CardCountriesSection';
-import Separator from '@/components/Separator/Separator';
 import styles from './page.module.css';
 
 export default function AboutPage() {
   return (
     <>
-      <div className={styles.grid}>
+      <div className="stack max-width-container">
         <Section
           variant="dark"
           title="About Us"
           headingLevel={1}
-          image={aboutUsImg}
+          imageMobile={aboutUsImgMobile}
+          imageTablet={aboutUsImgTablet}
+          imageDesktop={aboutUsImgDesktop}
         >
           <p>
             Founded in 2010, we are a creative agency that produces lasting
@@ -29,7 +37,10 @@ export default function AboutPage() {
           variant="light"
           title="World-class talent"
           headingLevel={2}
-          image={worldClassImg}
+          isReverse
+          imageMobile={worldClassImgMobile}
+          imageTablet={worldClassImgTablet}
+          imageDesktop={worldClassImgDesktop}
         >
           <p>
             We are a crew of strategists, problem-solvers, and technologists.
@@ -52,7 +63,9 @@ export default function AboutPage() {
           variant="light"
           title="The real deal"
           headingLevel={2}
-          image={realDealImg}
+          imageMobile={realDealImgMobile}
+          imageTablet={realDealImgTablet}
+          imageDesktop={realDealImgDesktop}
         >
           <p>
             As strategic partners in our clients&apos; businesses, we are ready

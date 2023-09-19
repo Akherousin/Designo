@@ -48,22 +48,25 @@ const LOCATIONS: Locations = [
 function CardLocationSection() {
   return (
     <section className={styles.locations}>
-      {LOCATIONS.map((location) => (
-        <CardLocation
-          key={location.office}
-          coords={location.coords}
-          phone={location.phone}
-          mail={location.mail}
-          country={location.country}
-        >
-          <strong>{location.office}</strong>
-          <p>
-            {location.street}
-            <br />
-            {location.city}
-          </p>
-        </CardLocation>
-      ))}
+      {LOCATIONS.map((location, index) => {
+        return (
+          <CardLocation
+            key={location.office}
+            coords={location.coords}
+            phone={location.phone}
+            mail={location.mail}
+            country={location.country}
+            isReversed={index % 2 !== 0}
+          >
+            <strong>{location.office}</strong>
+            <p>
+              {location.street}
+              <br />
+              {location.city}
+            </p>
+          </CardLocation>
+        );
+      })}
     </section>
   );
 }

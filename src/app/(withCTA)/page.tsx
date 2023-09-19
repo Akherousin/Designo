@@ -1,18 +1,16 @@
 import Hero from '@/components/Hero';
 import CardLinkSection from '@/components/CardLinkSection';
 import CardFeatureSection from '@/components/CardFeatureSection';
-import CallToAction from '@/components/CallToAction';
-import Separator from '@/components/Separator/Separator';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Separator size="big" />
-      <CardLinkSection />
-      <Separator size="big" />
-      <CardFeatureSection />
-      <Separator size="big" toSmall />
+      <div className={`${styles.grid} max-width-container`}>
+        <Hero />
+        <CardLinkSection />
+        <CardFeatureSection />
+      </div>
     </>
   );
 }

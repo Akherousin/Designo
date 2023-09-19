@@ -3,7 +3,7 @@ import styles from './page.module.css';
 
 export default function LocationsPage() {
   return (
-    <div className={styles.grid}>
+    <div className="stack max-width-container">
       <CardLocationSection />
     </div>
   );

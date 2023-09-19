@@ -6,31 +6,34 @@ import bgPatternTabletUp from '@/assets/contact/desktop/bg-pattern-hero-desktop.
 
 function FormSection() {
   return (
-    <section className={styles.section}>
-      <div className={styles.section__pattern}>
-        <Image
-          src={bgPatternMobile}
-          alt=""
-          fill={true}
-          className="mobile-only"
-        />
-        <Image
-          src={bgPatternTabletUp}
-          alt=""
-          fill={true}
-          className="tablet-up"
-        />
+    <section className={`${styles.section}`}>
+      <div className={styles.section__box}>
+        <div className={styles.section__pattern}>
+          <Image
+            src={bgPatternMobile}
+            alt=""
+            fill={true}
+            className="mobile-only"
+          />
+          <Image
+            src={bgPatternTabletUp}
+            alt=""
+            fill={true}
+            className="tablet-up"
+          />
+        </div>
+        <div className={styles.section__info}>
+          <h1 className={styles.section__title}>Contact us</h1>
+          <p className={styles.section__text}>
+            Ready to take it to the next level? Let&apos;s talk about your
+            project or idea and find out how we can help your business grow. If
+            you are looking for unique digital experiences that&apos;s relatable
+            to your users, drop us a line.
+          </p>
+        </div>
+
+        <Form />
       </div>
-      <div className={styles.section__info}>
-        <h1 className={styles.section__title}>Contact us</h1>
-        <p>
-          Ready to take it to the next level? Let&apos;s talk about your project
-          or idea and find out how we can help your business grow. If you are
-          looking for unique digital experiences that&apos;s relatable to your
-          users, drop us a line.
-        </p>
-      </div>
-      <Form />
     </section>
   );
 }

@@ -62,3 +62,17 @@
     margin-block-start: 1.25rem;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .cardLink {
+    padding-block: 107px 104px;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+  }
+
+  .cardLink__text {
+    margin-block-start: 1.5rem;
+    font-size: 0.9375rem;
+  }
+}

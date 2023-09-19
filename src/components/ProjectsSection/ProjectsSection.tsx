@@ -8,7 +8,7 @@ interface ProjectSectionProps {
 
 function ProjectSection({ projects }: ProjectSectionProps) {
   return (
-    <section className={styles.projects}>
+    <section className={`${styles.projects}`}>
       {projects.map((project) => {
         return (
           <CardProject

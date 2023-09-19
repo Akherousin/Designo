@@ -18,7 +18,7 @@
   margin-block-start: 2rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 1200px) {
   .cardFeature {
     max-width: revert;
     display: grid;
@@ -41,5 +41,12 @@
   .cardFeature__desc {
     margin-block-start: 0;
     grid-row: 2/3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cardFeature {
+    text-align: center;
+    max-width: 21.875rem;
   }
 }

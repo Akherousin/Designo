@@ -20,90 +20,106 @@ export interface Project {
   image: string | StaticImageData;
 }
 
-export interface Projects {
-  webDesign: Project[];
-  appDesign: Project[];
-  graphicDesign: Project[];
+interface PageInfo {
+  title: string;
+  text: string;
+  projects: Project[];
 }
 
-export const PROJECTS: Projects = {
-  webDesign: [
-    {
-      title: 'Express',
-      text: 'A multi-carrier shipping website for ecommerce businesses',
-      image: imgExpress,
-    },
-    {
-      title: 'Transfer',
-      text: 'Site for low-cost money transfers and sending money within seconds',
-      image: imgTransfer,
-    },
-    {
-      title: 'Photon',
-      text: 'A state-of-the-art music player with high-resolution audio and DSP effects',
-      image: imgPhoton,
-    },
-    {
-      title: 'Builder',
-      text: 'Connects users with local contractors based on their location',
-      image: imgBuilder,
-    },
-    {
-      title: 'Blogr',
-      text: 'Blogr is a platform for creating an online blog or publication',
-      image: imgBlogr,
-    },
-    {
-      title: 'Camp',
-      text: 'Get expert training in coding, data, design, and digital marketing',
-      image: imgCamp,
-    },
-  ],
-  appDesign: [
-    {
-      title: 'Airfilter',
-      text: 'Solving the problem of poor indoor air quality by filtering the air',
-      image: imgAirfilter,
-    },
-    {
-      title: 'Eyecam',
-      text: 'Product that lets you edit your favorite photos and videos at any time',
-      image: imgEyecam,
-    },
-    {
-      title: 'Faceit',
-      text: 'Get to meet your favorite internet superstar with the faceit app',
-      image: imgFaceit,
-    },
-    {
-      title: 'Todo',
-      text: 'A todo app that features cloud sync with light and dark mode',
-      image: imgTodo,
-    },
-    {
-      title: 'Loopstudios',
-      text: 'A VR experience app made for Loopstudios',
-      image: imgLoopstudios,
-    },
-  ],
-  graphicDesign: [
-    {
-      title: 'Tim Brown',
-      text: `A book cover designed for 
-      Tim Brown's new release, 'Change'`,
-      image: imgChange,
-    },
-    {
-      title: 'Boxed Water',
-      text: 'A simple packaging concept made for Boxed Water',
-      image: imgBoxedwater,
-    },
-    {
-      title: 'Science!',
-      text: 'A poster made in collaboration with the Federal Art Project',
-      image: imgScience,
-    },
-  ],
+export type DesignPages = 'web-design' | 'app-design' | 'graphic-design';
+
+type DesignPageInfo = {
+  [P in DesignPages]: PageInfo;
 };
 
-export type Coords = [number, number];
+export const DESIGNPAGEINFO: DesignPageInfo = {
+  'web-design': {
+    title: 'Web Design',
+    text: 'We build websites that serve as powerful marketing tools and bring memorable brand experiences.',
+    projects: [
+      {
+        title: 'Express',
+        text: 'A multi-carrier shipping website for ecommerce businesses',
+        image: imgExpress,
+      },
+      {
+        title: 'Transfer',
+        text: 'Site for low-cost money transfers and sending money within seconds',
+        image: imgTransfer,
+      },
+      {
+        title: 'Photon',
+        text: 'A state-of-the-art music player with high-resolution audio and DSP effects',
+        image: imgPhoton,
+      },
+      {
+        title: 'Builder',
+        text: 'Connects users with local contractors based on their location',
+        image: imgBuilder,
+      },
+      {
+        title: 'Blogr',
+        text: 'Blogr is a platform for creating an online blog or publication',
+        image: imgBlogr,
+      },
+      {
+        title: 'Camp',
+        text: 'Get expert training in coding, data, design, and digital marketing',
+        image: imgCamp,
+      },
+    ],
+  },
+  'app-design': {
+    title: 'App Design',
+    text: 'Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.',
+    projects: [
+      {
+        title: 'Airfilter',
+        text: 'Solving the problem of poor indoor air quality by filtering the air',
+        image: imgAirfilter,
+      },
+      {
+        title: 'Eyecam',
+        text: 'Product that lets you edit your favorite photos and videos at any time',
+        image: imgEyecam,
+      },
+      {
+        title: 'Faceit',
+        text: 'Get to meet your favorite internet superstar with the faceit app',
+        image: imgFaceit,
+      },
+      {
+        title: 'Todo',
+        text: 'A todo app that features cloud sync with light and dark mode',
+        image: imgTodo,
+      },
+      {
+        title: 'Loopstudios',
+        text: 'A VR experience app made for Loopstudios',
+        image: imgLoopstudios,
+      },
+    ],
+  },
+  'graphic-design': {
+    title: 'Graphic Design',
+    text: 'We deliver eye-catching branding materials that are tailored to meet your business objectives.',
+    projects: [
+      {
+        title: 'Tim Brown',
+        text: `A book cover designed for 
+      Tim Brown's new release, 'Change'`,
+        image: imgChange,
+      },
+      {
+        title: 'Boxed Water',
+        text: 'A simple packaging concept made for Boxed Water',
+        image: imgBoxedwater,
+      },
+      {
+        title: 'Science!',
+        text: 'A poster made in collaboration with the Federal Art Project',
+        image: imgScience,
+      },
+    ],
+  },
+};
