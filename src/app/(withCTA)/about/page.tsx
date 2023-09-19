@@ -8,9 +8,13 @@ import realDealImgTablet from '@/assets/about/tablet/image-real-deal.jpg';
 import aboutUsImgDesktop from '@/assets/about/desktop/image-about-hero.jpg';
 import worldClassImgDesktop from '@/assets/about/desktop/image-world-class-talent.jpg';
 import realDealImgDesktop from '@/assets/about/desktop/image-real-deal.jpg';
-
 import CardCountriesSection from '@/components/CardCountriesSection';
-import styles from './page.module.css';
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us - Designo',
+};
 
 export default function AboutPage() {
   return (

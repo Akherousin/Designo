@@ -4,6 +4,19 @@ import ProjectSection from '@/components/ProjectsSection';
 import CardLinkSection from '@/components/CardLinkSection';
 import styles from './page.module.css';
 import { DesignPages } from '@/data';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { design: DesignPages };
+}) {
+  const pageInfo = DESIGNPAGEINFO[params.design];
+
+  return {
+    title: `${pageInfo.title} Projects - Designo`,
+  };
+}
 
 export default async function DesignPage({
   params,
