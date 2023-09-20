@@ -68,7 +68,14 @@ function Header() {
           </li>
         </ul>
       </nav>
-      {isNavOpen && <div className={styles.nav__overlay} />}
+      {isNavOpen && (
+        <div
+          className={styles.nav__overlay}
+          onClick={() => {
+            setIsNavOpen(false);
+          }}
+        />
+      )}
     </header>
   );
 }
