@@ -16,12 +16,14 @@ interface Input {
   type: string;
   autoComplete: string;
   inputMode: HTMLAttributes<HTMLElement>['inputMode'];
+  error: string;
 }
 
 interface Textarea {
   as: 'textarea';
   label: string;
   name: InputNames;
+  error: string;
 }
 
 type InputNames = keyof typeof initialState;
@@ -84,6 +86,7 @@ const INPUTS: (Input | Textarea)[] = [
     type: 'text',
     autoComplete: 'name',
     inputMode: 'text',
+    error: "Can't be empty",
   },
   {
     label: 'email address',
@@ -92,6 +95,7 @@ const INPUTS: (Input | Textarea)[] = [
     type: 'email',
     autoComplete: 'email',
     inputMode: 'email',
+    error: 'Please use a valid email address',
   },
   {
     label: 'phone',
@@ -100,8 +104,15 @@ const INPUTS: (Input | Textarea)[] = [
     type: 'text',
     autoComplete: 'tel',
     inputMode: 'tel',
+    error: "Can't be empty",
   },
-  { label: 'your message', name: 'message', as: 'textarea' },
+
+  {
+    label: 'your message',
+    name: 'message',
+    as: 'textarea',
+    error: "Can't be empty",
+  },
 ];
 
 function Form() {
@@ -176,8 +187,10 @@ function Form() {
             >
               {state[input.name]['showError'] && (
                 <>
-                  <span className="visually-hidden">{input.name} field</span>
-                  can&apos;t be empty <IconError />
+                  {input.name !== 'email' && (
+                    <span className="visually-hidden">{input.name} field</span>
+                  )}
+                  {input.error} <IconError />
                 </>
               )}
             </p>
