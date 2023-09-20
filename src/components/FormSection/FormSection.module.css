@@ -17,6 +17,7 @@
 
 .section__info {
   composes: text-small from global;
+  padding-inline: var(--padding-inline);
   position: relative;
   margin-block-end: 2.5rem;
   line-height: 1.5625rem;
@@ -53,6 +54,7 @@
 
   .section__info {
     margin-block-end: 2rem;
+    padding-inline: 0;
   }
 
   .section__text {

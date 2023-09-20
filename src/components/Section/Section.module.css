@@ -16,7 +16,7 @@
 .section__info {
   composes: text-small from global;
   padding-block: 80px;
-
+  padding-inline: var(--padding-inline);
   position: relative;
   overflow: hidden;
 }

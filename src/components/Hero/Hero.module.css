@@ -6,6 +6,7 @@
   padding-block: 80px 451px;
   position: relative;
   isolation: isolate;
+  padding-inline: var(--padding-inline);
 
   /* makes sure that phone image doesn't cause scroll bugglers on lower resolutions*/
   overflow: hidden;
