@@ -1,15 +1,17 @@
 'use client';
 import Logo from '@/components/Logo';
 import styles from './Header.module.css';
-import NavLink from '../NavLink/NavLink';
+import NavLink from '@/components/NavLink';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { useTrapFocus } from '@/hooks/useTrapFocus';
+import { usePreventScroll } from '@/hooks/usePreventScroll';
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
   const navRef = useTrapFocus(isNavOpen);
+  usePreventScroll(isNavOpen);
 
   useEffect(() => {
     setIsNavOpen(false);
@@ -18,10 +20,6 @@ function Header() {
   const handleClick = () => {
     setIsNavOpen((isNavOpen) => !isNavOpen);
   };
-
-  useEffect(() => {
-    document.body.style.overflow = isNavOpen ? 'hidden' : 'unset';
-  }, [isNavOpen]);
 
   return (
     <header className={`${styles.header} max-width-container`}>
@@ -33,7 +31,7 @@ function Header() {
 
       <nav aria-labelledby="nav__label" ref={navRef} className={styles.nav}>
         <button
-          className={styles.nav__btn}
+          className={`${styles.nav__btn} click-target-helper`}
           aria-expanded={isNavOpen}
           aria-controls="nav__list"
           onClick={handleClick}
@@ -51,13 +49,19 @@ function Header() {
           className={`${styles.nav__list} ${isNavOpen ? styles.open : ''}`}
         >
           <li>
-            <NavLink href="/about">Our company</NavLink>
+            <NavLink href="/about" className="click-target-helper">
+              Our company
+            </NavLink>
           </li>
           <li>
-            <NavLink href="/locations">Locations</NavLink>
+            <NavLink href="/locations" className="click-target-helper">
+              Locations
+            </NavLink>
           </li>
           <li>
-            <NavLink href="/contact">Contact</NavLink>
+            <NavLink href="/contact" className="click-target-helper">
+              Contact
+            </NavLink>
           </li>
         </ul>
       </nav>
