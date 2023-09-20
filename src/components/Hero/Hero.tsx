@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import bgPattern from '@/assets/home/desktop/bg-pattern-hero-home.svg';
-import phoneImgSrc from '@/assets/home/desktop/image-hero-phone.png';
+import phoneImgSrc from '@/assets/home/desktop/image-hero-phone.avif';
 import StyledLink from '../StyledLink/StyledLink';
 import styles from './Hero.module.css';
 

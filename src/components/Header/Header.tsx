@@ -6,12 +6,15 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { useTrapFocus } from '@/hooks/useTrapFocus';
 import { usePreventScroll } from '@/hooks/usePreventScroll';
+import { useMakeBodyInert } from '@/hooks/useMakeBodyInert';
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
+
   const navRef = useTrapFocus(isNavOpen);
   usePreventScroll(isNavOpen);
+  useMakeBodyInert(isNavOpen);
 
   useEffect(() => {
     setIsNavOpen(false);
