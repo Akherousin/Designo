@@ -34,7 +34,7 @@ function CardLocation({
       </div>
       <div className={styles.location__info}>
         <div className={styles.location__pattern}>
-          <Image src={patternSrc} alt="" fill={true} />
+          <Image src={patternSrc} alt="" fill={true} sizes="100%" />
         </div>
         <div className={styles.wrapper__center}>
           <h2 className={styles.location__country}>{country}</h2>

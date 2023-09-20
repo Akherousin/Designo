@@ -8,7 +8,7 @@ function CallToAction() {
     <section className={styles.cta}>
       <div className={`${styles.cta__box} max-width-container`}>
         <div className={styles.cta__pattern}>
-          <Image src={bgPattern} alt="" fill={true} />
+          <Image src={bgPattern} alt="" fill={true} sizes="100%" />
         </div>
         <h2 className={styles.cta__header}>
           Let&apos;s talk about your project

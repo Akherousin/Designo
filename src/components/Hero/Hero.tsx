@@ -21,10 +21,10 @@ function Hero() {
           <StyledLink href="about">Learn More</StyledLink>
         </div>
         <div className={styles.hero__pattern}>
-          <Image alt="" src={bgPattern} fill={true} />
+          <Image alt="" src={bgPattern} fill={true} sizes="100%" />
         </div>
         <div className={styles.hero__image}>
-          <Image src={phoneImgSrc} alt="" priority fill={true} />
+          <Image src={phoneImgSrc} alt="" priority fill={true} sizes="100%" />
         </div>
       </div>
     </section>

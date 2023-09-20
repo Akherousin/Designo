@@ -14,12 +14,14 @@ function FormSection() {
             alt=""
             fill={true}
             className="mobile-only"
+            sizes="100%"
           />
           <Image
             src={bgPatternTabletUp}
             alt=""
             fill={true}
             className="tablet-up"
+            sizes="100%"
           />
         </div>
         <div className={styles.section__info}>

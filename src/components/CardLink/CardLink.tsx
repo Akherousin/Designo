@@ -26,9 +26,27 @@ function CardLink({
       </p>
 
       <div className={styles.cardLink__image}>
-        <Image src={imageMobile} alt="" fill={true} className="mobile-only" />
-        <Image src={imageTablet} alt="" fill={true} className="tablet-only" />
-        <Image src={imageDesktop} alt="" fill={true} className="desktop-up" />
+        <Image
+          src={imageMobile}
+          alt=""
+          fill={true}
+          className="mobile-only"
+          sizes="100%"
+        />
+        <Image
+          src={imageTablet}
+          alt=""
+          fill={true}
+          className="tablet-only"
+          sizes="100%"
+        />
+        <Image
+          src={imageDesktop}
+          alt=""
+          fill={true}
+          className="desktop-up"
+          sizes="100%"
+        />
       </div>
     </Link>
   );
