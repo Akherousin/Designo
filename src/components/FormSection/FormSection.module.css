@@ -9,6 +9,10 @@
   color: var(--color-primary-light);
 }
 
+.section__box > form {
+  padding-inline: var(--padding-inline);
+}
+
 .section__title {
   composes: heading-large from global;
   margin-block-end: 1.5rem;
@@ -46,6 +50,10 @@
     overflow: hidden;
     text-align: start;
     padding-inline: 58px;
+  }
+
+  .section__box > form {
+    padding-inline: 0;
   }
 
   .section__title {
