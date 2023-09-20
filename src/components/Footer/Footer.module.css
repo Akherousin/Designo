@@ -14,10 +14,16 @@
   list-style: none;
 }
 
-.footer a {
+.footer a:link,
+.footer a:visited {
   text-decoration: none;
   color: inherit;
   display: inline-block;
+}
+
+.footer a:hover,
+.footer a:active {
+  text-decoration: underline;
 }
 
 .footer__list {

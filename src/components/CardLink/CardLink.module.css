@@ -20,10 +20,14 @@
   background-color: black;
   z-index: -1;
   opacity: 0.4969;
+  transition: all 500ms ease-out;
 }
 
-.cardLink:hover::after {
+.cardLink:hover::after,
+.cardLink:focus-visible::after {
+  transition: all 150ms ease-in;
   background-color: var(--color-primary);
+  opacity: 0.8006;
 }
 
 .cardLink__heading {
