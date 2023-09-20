@@ -5,7 +5,8 @@ import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import iconMarker from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-import { Coords } from '@/data';
+
+type Coords = [number, number];
 
 interface MapProps {
   coords: Coords;
