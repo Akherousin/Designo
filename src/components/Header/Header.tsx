@@ -3,17 +3,25 @@ import Logo from '@/components/Logo';
 import styles from './Header.module.css';
 import NavLink from '../NavLink/NavLink';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTrapFocus } from '@/hooks/useTrapFocus';
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
-  const navRef = useTrapFocus();
+  const navRef = useTrapFocus(isNavOpen);
 
   useEffect(() => {
     setIsNavOpen(false);
   }, [pathname]);
+
+  const handleClick = () => {
+    setIsNavOpen((isNavOpen) => !isNavOpen);
+  };
+
+  useEffect(() => {
+    document.body.style.overflow = isNavOpen ? 'hidden' : 'unset';
+  }, [isNavOpen]);
 
   return (
     <header className={`${styles.header} max-width-container`}>
@@ -23,36 +31,12 @@ function Header() {
         Site
       </span>
 
-      <nav aria-labelledby="nav__label" className={styles['nav--tablet-up']}>
-        <ul className={styles['nav__list--tablet-up']}>
-          <li>
-            <NavLink href="/about" className={styles.nav__link}>
-              Our company
-            </NavLink>
-          </li>
-          <li>
-            <NavLink href="/locations" className={styles.nav__link}>
-              Locations
-            </NavLink>
-          </li>
-          <li>
-            <NavLink href="/contact" className={styles.nav__link}>
-              Contact
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-
-      <nav
-        aria-labelledby="nav__label"
-        ref={navRef}
-        className={styles['nav--mobile']}
-      >
+      <nav aria-labelledby="nav__label" ref={navRef} className={styles.nav}>
         <button
           className={styles.nav__btn}
           aria-expanded={isNavOpen}
           aria-controls="nav__list"
-          onClick={() => setIsNavOpen((isNavOpen) => !isNavOpen)}
+          onClick={handleClick}
         >
           <span className="visually-hidden">Navigation</span>
           {isNavOpen ? (

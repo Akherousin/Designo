@@ -1,9 +1,11 @@
 import { RefObject, useCallback, useEffect, useRef } from 'react';
 
-export function useTrapFocus() {
+export function useTrapFocus(isNavOpen: boolean) {
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
+    if (!isNavOpen) return;
+
     // get all focusable elements
     const element = ref.current;
 
@@ -47,7 +49,7 @@ export function useTrapFocus() {
     element.addEventListener('keydown', trapFocus);
 
     return () => element.removeEventListener('keydown', trapFocus);
-  }, []);
+  }, [isNavOpen]);
 
   return ref;
 }
