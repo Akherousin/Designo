@@ -9,7 +9,7 @@ function FocusOnHeading() {
   const prevPath = usePreviousRoute();
 
   useEffect(() => {
-    if (!prevPath) return;
+    if (!prevPath || window.location.hash) return;
 
     let heading = document.querySelector('h1');
     if (!heading) {
