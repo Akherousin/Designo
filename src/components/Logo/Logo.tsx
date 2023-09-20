@@ -10,7 +10,7 @@ interface LogoProps {
 
 function Logo({ variant = 'dark' }: LogoProps) {
   return (
-    <NavLink href="/" className={styles.logo}>
+    <NavLink href="/" className={`${styles.logo} click-target-helper`}>
       <span className="visually-hidden">Homepage - Designo</span>
       <Image
         src={variant === 'dark' ? logoDark : logoLight}

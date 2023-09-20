@@ -1,6 +1,6 @@
 import styles from './Footer.module.css';
 import Logo from '@/components/Logo/';
-import Link from 'next/link';
+import NavLink from '@/components/NavLink';
 
 function Footer() {
   return (
@@ -10,13 +10,19 @@ function Footer() {
 
         <ul className={styles.footer__list} role="list">
           <li>
-            <Link href="/about">Our company</Link>
+            <NavLink href="/about" className="click-target-helper">
+              Our company
+            </NavLink>
           </li>
           <li>
-            <Link href="/locations">Locations</Link>
+            <NavLink href="/locations" className="click-target-helper">
+              Locations
+            </NavLink>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <NavLink href="/contact" className="click-target-helper">
+              Contact
+            </NavLink>
           </li>
         </ul>
 
@@ -37,31 +43,37 @@ function Footer() {
 
         <ul role="list" className={styles.footer__socials}>
           <li>
-            <a href="https://www.facebook.com/">
+            <a href="https://www.facebook.com/" className="click-target-helper">
               <span className="visually-hidden">Facebook</span>
               <FacebookSvg />
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/">
+            <a href="https://www.youtube.com/" className="click-target-helper">
               <span className="visually-hidden">Youtube</span>
               <YoutubeSvg />
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com/">
+            <a href="https://www.twitter.com/" className="click-target-helper">
               <span className="visually-hidden">Twitter</span>
               <TwitterSvg />
             </a>
           </li>
           <li>
-            <a href="https://www.pinterest.com/">
+            <a
+              href="https://www.pinterest.com/"
+              className="click-target-helper"
+            >
               <span className="visually-hidden">Pinterest</span>
               <PinterestSvg />
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/">
+            <a
+              href="https://www.instagram.com/"
+              className="click-target-helper"
+            >
               <span className="visually-hidden">Instagram</span>
               <InstagramSvg />
             </a>
