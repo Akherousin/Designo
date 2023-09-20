@@ -29,8 +29,10 @@ function Footer() {
         <p className={styles.footer__postal}>
           <strong>Designo central office</strong>
           <br />
-          3886 Wellington Street <br />
-          Toronto, Ontario M9C 3J5
+          <a href="http://maps.google.com/?q=3886 Wellington Street, Toronto, Ontario">
+            3886 Wellington Street <br />
+            Toronto, Ontario M9C 3J5
+          </a>
         </p>
 
         <address className={styles.footer__contact}>
