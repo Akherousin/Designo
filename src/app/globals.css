@@ -47,6 +47,24 @@ body::after {
   box-shadow: 0 0 0 6px black;
 }
 
+#skip-link {
+  /* move the link out of the viewport */
+  position: absolute;
+  top: -30em;
+  left: 0;
+  right: 0;
+  width: min-content;
+  margin-inline: auto;
+}
+
+#skip-link:focus-visible {
+  /* bring the link back "down" into view */
+  top: 10px;
+
+  /* ensure it is positioned on top of everything else when it is shown */
+  z-index: 1600;
+}
+
 /* Utilities */
 
 .heading-large {

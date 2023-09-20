@@ -4,6 +4,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 import { Jost } from 'next/font/google';
+import FocusOnHeading from '@/components/FocusOnHeading';
+import StyledLink from '@/components/StyledLink';
 
 const jost = Jost({
   subsets: ['latin'],
@@ -24,8 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jost.className}>
+        <StyledLink href="#main" id="skip-link" variant="dark" plainAnchor>
+          Skip to Main Content
+        </StyledLink>
+        <FocusOnHeading />
         <Header />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <Footer />
       </body>
     </html>
