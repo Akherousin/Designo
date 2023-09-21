@@ -11,6 +11,7 @@ import realDealImgDesktop from '@/assets/about/desktop/image-real-deal.jpg';
 import CardCountriesSection from '@/components/CardCountriesSection';
 
 import { Metadata } from 'next';
+import Decoration from '@/components/Decoration';
 
 export const metadata: Metadata = {
   title: 'About Us - Designo',
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <Decoration style={{ top: '13%' }} />
+      <Decoration isFlipped style={{ bottom: '33%', right: '-28%' }} />
       <div className="stack max-width-container">
         <Section
           variant="dark"

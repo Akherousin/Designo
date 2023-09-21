@@ -4,7 +4,7 @@ import ProjectSection from '@/components/ProjectsSection';
 import CardLinkSection from '@/components/CardLinkSection';
 import styles from './page.module.css';
 import { DesignPages } from '@/data';
-import { Metadata } from 'next';
+import Decoration from '@/components/Decoration';
 
 export async function generateMetadata({
   params,
@@ -27,6 +27,11 @@ export default async function DesignPage({
 
   return (
     <>
+      <Decoration
+        style={{
+          top: '10%',
+        }}
+      />
       <div className={`${styles.grid} max-width-container`}>
         <Intro title={pageInfo.title} text={pageInfo.text} />
         <ProjectSection projects={pageInfo.projects} />

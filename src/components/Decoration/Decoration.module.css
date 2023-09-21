@@ -1,0 +1,16 @@
+.decoration {
+  display: none;
+  position: absolute;
+  z-index: -1;
+}
+
+.flipped {
+  scale: -1;
+}
+
+/* 1200px */
+@media screen and (min-width: 75rem) {
+  .decoration {
+    display: block;
+  }
+}
