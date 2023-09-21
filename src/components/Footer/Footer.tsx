@@ -43,7 +43,14 @@ function Footer() {
           <a href="mailto:contact@designo.co">M: contact@designo.co</a>
         </address>
 
-        <ul role="list" className={styles.footer__socials}>
+        <ul
+          role="list"
+          className={styles.footer__socials}
+          aria-labelledby="social-links-label"
+        >
+          <span hidden id="social-links-label">
+            Social links
+          </span>
           <li>
             <a href="https://www.facebook.com/" className="click-target-helper">
               <span className="visually-hidden">Facebook</span>
