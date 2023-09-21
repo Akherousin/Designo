@@ -95,7 +95,7 @@ const INPUTS: (Input | Textarea)[] = [
     type: 'email',
     autoComplete: 'email',
     inputMode: 'email',
-    error: 'Please use a valid email address',
+    error: "Can't be empty",
   },
   {
     label: 'phone',
@@ -187,9 +187,7 @@ function Form() {
             >
               {state[input.name]['showError'] && (
                 <>
-                  {input.name !== 'email' && (
-                    <span className="visually-hidden">{input.name} field</span>
-                  )}
+                  {<span className="visually-hidden">{input.name} field</span>}
                   {input.error} <IconError />
                 </>
               )}
