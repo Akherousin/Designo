@@ -60,6 +60,23 @@
 
 .open {
   display: initial;
+  transform-origin: top;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav__overlay {
+    animation: fade-in 50ms both ease-out;
+  }
+
+  .open {
+    animation: slide-down 150ms both ease-out;
+    animation-delay: 50ms;
+  }
+
+  .open > * {
+    animation: fade-in 450ms both ease-out;
+    animation-delay: 150ms;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -91,5 +108,25 @@
 
   .nav__btn {
     display: none;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
