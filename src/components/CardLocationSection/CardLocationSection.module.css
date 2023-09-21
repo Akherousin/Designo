@@ -2,7 +2,8 @@
   margin-block-start: 2.5rem;
 }
 
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   .locations {
     padding-inline: var(--padding-inline);
   }
@@ -12,7 +13,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .locations > * + * {
     margin-block-start: 2rem;
   }

@@ -5,7 +5,6 @@ import bgPattern from '@/assets/web-design/desktop/bg-pattern-intro-web.svg';
 interface IntroProps {
   title: string;
   text: string;
-  // image: string | StaticImageData;
 }
 
 function Intro({ title, text }: IntroProps) {

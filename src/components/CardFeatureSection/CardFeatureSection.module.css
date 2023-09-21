@@ -1,6 +1,4 @@
 .section {
-  /* margin-block-start: 7.5rem; */
-
   padding-inline: var(--padding-inline);
 }
 
@@ -8,13 +6,15 @@
   margin-block-start: 5rem;
 }
 
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   .section > * + * {
     margin-block-start: 2rem;
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .section {
     display: flex;
     flex-wrap: wrap;

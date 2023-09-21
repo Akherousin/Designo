@@ -4,8 +4,8 @@
   padding-inline: var(--padding-inline);
   background: linear-gradient(
     180deg,
-    var(--color-primary-light) 0%,
-    var(--color-primary-light) 74.9999%,
+    transparent 0%,
+    transparent 74.9999%,
     var(--color-primary-dark) 75%,
     var(--color-primary-dark) 100%
   );
@@ -51,7 +51,8 @@
   margin-block-start: 1.9375rem;
 }
 
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   .cta__header {
     font-size: var(--h-size-m);
     line-height: 2.5rem;
@@ -66,8 +67,8 @@
     object-position: top 50% left -20px;
   }
 }
-
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .cta__box {
     padding-block: 72px;
     padding-inline: var(--box-padding-inline) 96px;

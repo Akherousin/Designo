@@ -57,7 +57,8 @@
   object-fit: cover;
 }
 
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   .cardLink {
     padding-block: 53px;
   }
@@ -67,7 +68,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .cardLink {
     padding-block: 107px 104px;
     display: grid;

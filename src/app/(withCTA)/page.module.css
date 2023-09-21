@@ -2,13 +2,15 @@
   margin-block-end: 7.5rem;
 }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+/* 600px 1200px*/
+@media screen and (min-width: 37.5rem) and (max-width: 75rem) {
   .grid > *:last-child {
     margin-block-end: 4.1rem;
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .grid > * {
     margin-block-end: 10rem;
   }

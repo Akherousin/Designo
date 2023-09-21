@@ -36,7 +36,8 @@
   object-position: top right;
 }
 
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   .intro {
     padding-inline: var(--padding-inline);
   }
@@ -52,7 +53,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .intro {
     max-width: var(--max-width);
   }

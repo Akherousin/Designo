@@ -1,4 +1,3 @@
-import { ReactSVGElement } from 'react';
 import styles from './CardFeature.module.css';
 import Image from 'next/image';
 

@@ -54,7 +54,8 @@
   margin-block-start: 1rem;
 }
 
-@media screen and (min-width: 600px) and (max-width: 1200px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) and (max-width: 1200px) {
   .project {
     grid-template-columns: 339fr 350fr;
     grid-template-rows: auto;
@@ -68,7 +69,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .project {
     max-width: 21.875rem;
     margin: 0;

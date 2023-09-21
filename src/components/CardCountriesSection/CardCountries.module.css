@@ -6,13 +6,15 @@
   margin-block-start: 3rem;
 }
 
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   .countries > * + * {
     margin-block-start: 5rem;
   }
 }
 
-@media screen and (min-width: 950px) {
+/* 950px */
+@media screen and (min-width: 59.375rem) {
   .countries > * + * {
     margin-block-start: 0;
   }

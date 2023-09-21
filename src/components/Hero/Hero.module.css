@@ -61,7 +61,8 @@
   object-position: bottom -56px right 1px;
 }
 
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   .hero {
     padding-inline: var(--padding-inline);
   }
@@ -97,7 +98,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .hero__box {
     text-align: start;
     padding-block: 145px;

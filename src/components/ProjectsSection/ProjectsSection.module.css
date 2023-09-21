@@ -6,13 +6,15 @@
   margin-block-start: 40px;
 }
 
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   .projects > * + * {
     margin-block-start: 32px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .projects {
     display: grid;
     justify-items: center;

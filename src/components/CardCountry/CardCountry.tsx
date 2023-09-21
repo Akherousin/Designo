@@ -1,5 +1,5 @@
 import StyledLink from '../StyledLink';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import styles from './CardCountry.module.css';
 import { Country } from '@/components/CardCountriesSection/CardCountriesSection';
 

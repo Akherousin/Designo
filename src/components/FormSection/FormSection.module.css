@@ -40,7 +40,8 @@
   object-position: top 0 left -90px;
 }
 
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   .section {
     padding-inline: var(--padding-inline);
   }
@@ -74,7 +75,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .section__box {
     display: grid;
     align-items: center;

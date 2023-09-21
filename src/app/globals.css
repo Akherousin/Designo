@@ -15,7 +15,7 @@
   --padding-inline: 24px;
   --box-padding-inline: 95px;
   --border-radius: 15px;
-  --max-width: 70rem;
+  --max-width: 69.375rem;
 }
 
 body {
@@ -26,20 +26,6 @@ body {
   background-color: var(--color-primary-light);
   font-family: var(--font-general);
   position: relative;
-}
-
-body::after {
-  /* content: ''; */
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  z-index: 9999;
-  background-image: url('/Desktop.png');
-  /* background-image: url('/Tablet.png'); */
-  background-repeat: no-repeat;
-  background-position: top;
-  opacity: 0.5;
-  pointer-events: none;
 }
 
 :focus-visible {
@@ -142,8 +128,8 @@ body::after {
 .stack > * {
   margin-block-end: 7.5rem;
 }
-
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   :root {
     --h-size-l: 3rem;
     --h-size-m: 2.5rem;
@@ -175,8 +161,8 @@ body::after {
     display: initial;
   }
 }
-
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   :root {
     --padding-inline: 0;
   }

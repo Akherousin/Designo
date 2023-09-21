@@ -53,18 +53,20 @@
 }
 
 .footer__socials {
+  height: 100%;
   margin-block-start: 2.5rem;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  line-height: 1;
 }
 
 .footer__socials a:hover path {
   fill: var(--color-secondary);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 43.75rem) {
   .footer__content {
     display: grid;
     grid-template-columns: auto auto 1fr;
@@ -116,7 +118,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .footer__content {
     padding-block: 72px;
   }

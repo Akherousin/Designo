@@ -57,7 +57,8 @@
   pointer-events: none;
 }
 
-@media screen and (min-width: 600px) {
+/* 600px */
+@media screen and (min-width: 37.5rem) {
   .location {
     text-align: start;
   }
@@ -103,7 +104,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+/* 1200px */
+@media screen and (min-width: 75rem) {
   .location {
     --map-size: 21.875rem;
     display: grid;
