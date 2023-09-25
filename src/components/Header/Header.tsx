@@ -12,6 +12,7 @@ function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const pathname = usePathname();
 
+  const menuBtnRef = useRef(null);
   const navRef = useTrapFocus(isNavOpen);
   usePreventScroll(isNavOpen);
   useMakeBodyInert(isNavOpen);
@@ -19,6 +20,22 @@ function Header() {
   useEffect(() => {
     setIsNavOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        if (menuBtnRef.current) {
+          const menuBtn = menuBtnRef.current as HTMLButtonElement;
+          menuBtn.focus();
+          setIsNavOpen(false);
+        }
+      }
+    };
+
+    if (navRef.current) {
+      navRef.current.addEventListener('keydown', handleKeyDown);
+    }
+  }, [navRef]);
 
   const handleClick = () => {
     setIsNavOpen((isNavOpen) => !isNavOpen);
@@ -38,6 +55,7 @@ function Header() {
           aria-expanded={isNavOpen}
           aria-controls="nav__list"
           onClick={handleClick}
+          ref={menuBtnRef}
         >
           <span className="visually-hidden">Navigation</span>
           {isNavOpen ? (
